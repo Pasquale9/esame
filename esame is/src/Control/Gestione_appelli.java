@@ -5,10 +5,12 @@ import java.util.Date;
 import Entity.*;
 public class Gestione_appelli {
 	public ArrayList<Appello> Elenco_Appelli= new ArrayList<Appello>();
+	public ArrayList<Corso> Elenco_Corsi= new ArrayList<Corso>();
 	int IdAppello=0;
 	
 	public Corso CreaCorso(int id, String nomedocente,String  Nomecorso,int cfu) {
 		Corso c= new Corso(id,nomedocente,Nomecorso,cfu);
+		Elenco_Corsi.add(c);
 		return c;
 		
 	}

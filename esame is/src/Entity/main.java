@@ -26,9 +26,9 @@ public class main {
 		Studente stud=new Studente("carlo", "rossi", "crl12");
 		Studente stude=new Studente("crlo", "rosi", "crl2");
 		g.Prenota_Appello(stud, 0);
-		g.Prenota_Appello(stude, 0);
+		g.Prenota_Appello(stude, 1);
 		g.Visualizza_Appelli();
-	    int err=g.Visualizza_Prenotati(null);
+	    int err=g.Visualizza_Prenotati("1");
 	    System.out.println(err);
 		
 
