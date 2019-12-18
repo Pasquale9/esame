@@ -22,6 +22,14 @@ public class Gestione_appelli {
 		return a;
 	}
 	
+	public Prova Crea_Prova(Date dataProva,String aula,Tipo_Prova tipo) {
+		Prova a= new Prova(dataProva, aula, tipo);
+		return a;
+	}
+	
+	
+	
+	
 	public void Prenota_Appello(Studente stud, int id)
 	{
 		for(Appello a : Elenco_Appelli)
@@ -45,19 +53,26 @@ public class Gestione_appelli {
 	}
 	
 	
-	public int Visualizza_Prenotati(int idappello)
+	public int Visualizza_Prenotati(String idappello)
 	{
-		//System.out.println(a);
+		try {
+		int id=Integer.parseInt(idappello.trim());
 		for(Appello a : Elenco_Appelli)
 		{
 		
-			if(a.Get_id_appello()==idappello)
+			if(a.Get_id_appello()==id)
 			{
 				System.out.println(a.Get_Studenti());
 				return a.Get_Studenti().size();
 				
-			}
+			}}
 		}
+		catch (NumberFormatException nfe){
+		      System.out.println("NumberFormatException: " + nfe.getMessage());
+		      return -1;
+		    }
+		
+		
 			return -1;
 		
 	}

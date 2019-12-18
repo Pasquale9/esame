@@ -28,7 +28,7 @@ public class main {
 		g.Prenota_Appello(stud, 0);
 		g.Prenota_Appello(stude, 0);
 		g.Visualizza_Appelli();
-	    int err=g.Visualizza_Prenotati(0);
+	    int err=g.Visualizza_Prenotati("0");
 	    System.out.println(err);
 		
 

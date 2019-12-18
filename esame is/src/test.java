@@ -28,7 +28,7 @@ public class test {
 		prove[2]=new Prova(dat, "I2", Tipo_Prova.ORALE);
 		g.CreaCorso(0, "Natella","Analisi", 9);
 		g.Crea_Appello(dat, prove, 0);
-		int err=g.Visualizza_Prenotati(0);
+		int err=g.Visualizza_Prenotati("0");
 		assertEquals(0,err);
 	}
 	@Test
@@ -47,7 +47,7 @@ public class test {
 		g.Crea_Appello(dat, prove, 0);
 		Studente stud=new Studente("carlo", "rossi", "n46000");
 		g.Prenota_Appello(stud, 0);
-		int err=g.Visualizza_Prenotati(0);
+		int err=g.Visualizza_Prenotati("0");
 		
 		
 		assertEquals(1,err);
@@ -72,7 +72,7 @@ public class test {
 		g.Prenota_Appello(stud2, 0);
 		Studente stud3=new Studente("franco", "rossi", "n46002");
 		g.Prenota_Appello(stud3, 0);
-		int err=g.Visualizza_Prenotati(0);
+		int err=g.Visualizza_Prenotati("0");
 	
 		assertEquals(3,err);
 	}
@@ -97,7 +97,7 @@ public class test {
 			g.Prenota_Appello(stud2, 0);
 			Studente stud3=new Studente("franco", "rossi", "n46002");
 			g.Prenota_Appello(stud3, 0);
-			int err=g.Visualizza_Prenotati(7);
+			int err=g.Visualizza_Prenotati("7");
 		
 			assertEquals(-1,err);
 		}
@@ -121,7 +121,7 @@ public class test {
 			g.Prenota_Appello(stud2, 0);
 			Studente stud3=new Studente("franco", "rossi", "n46002");
 			g.Prenota_Appello(stud3, 0);
-			int err=g.Visualizza_Prenotati(-1);
+			int err=g.Visualizza_Prenotati("b");
 		
 			assertEquals(-1,err);
 		}
