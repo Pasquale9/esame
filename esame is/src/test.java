@@ -121,7 +121,7 @@ public class test {
 			g.Prenota_Appello(stud2, 0);
 			Studente stud3=new Studente("franco", "rossi", "n46002");
 			g.Prenota_Appello(stud3, 0);
-			int err=g.Visualizza_Prenotati("b");
+			int err=g.Visualizza_Prenotati("x12");
 		
 			assertEquals(-1,err);
 		}

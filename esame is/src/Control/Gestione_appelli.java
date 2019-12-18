@@ -68,7 +68,12 @@ public class Gestione_appelli {
 			}}
 		}
 		catch (NumberFormatException nfe){
+			 System.out.println("hai inserito un id che non corrisponde a nessun appello! Inserisci un id valido");
 		      System.out.println("NumberFormatException: " + nfe.getMessage());
+		      return -1;
+		    }
+		catch (NullPointerException e){
+		      System.out.println("hai inserito un valore nullo! Inserisci un id valido");
 		      return -1;
 		    }
 		
